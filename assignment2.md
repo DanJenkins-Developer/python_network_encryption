@@ -7,7 +7,7 @@ output: pdf_document
 ---
 <!-- # Assignment -->
 
-## Question 1: Question 1: Encode the following plaintext messages (M) using Caesar cipher encryption. 
+## Question 1: Encode the following plaintext messages (M) using Caesar cipher encryption. 
 - M = zoo, E(M) = 2rr
 - M = xray, E(M) = ud1
 - M = rellis, E(M) = uhoolv
