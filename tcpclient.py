@@ -37,44 +37,44 @@ s.connect((host, port))
 #           ", message:", decryptCaesar(msg.decode()), "\n")
 
 # ROT13
-# for word in wordArr:
-
-#     # encryption
-#     message = word
-#     encryptedMessage = ROT13(message)
-
-#     # send message
-#     print('message:', message, ",sending (encrypted):", encryptedMessage)
-#     s.send(encryptedMessage.encode())
-
-#     # recieve message
-#     msg = s.recv(1024)
-#     print("received (encrypted):", msg.decode(),
-#           ", message:", ROT13(msg.decode()), "\n")
-
-# Three round encryption
 for word in wordArr:
-    message = word
 
-    # Encryption
-    C1 = encryptCaesar(message)
-    C2 = ROT13(C1)
-    C3 = sBox(C2)
+    # encryption
+    message = word
+    encryptedMessage = ROT13(message)
 
     # send message
-    print('message:', message, ", sending (encrypted):", C3)
-    s.send(C3.encode())
+    print('message:', message, ",sending (encrypted):", encryptedMessage)
+    s.send(encryptedMessage.encode())
 
-    # recieve message and decrypt
+    # recieve message
     msg = s.recv(1024)
-
-    # Decryption
-    C3 = inv_sBox(msg.decode())
-    C2 = ROT13(C3)
-    C1 = decryptCaesar(C2)
-
     print("received (encrypted):", msg.decode(),
-          ", message:", C1, "\n")
+          ", message:", ROT13(msg.decode()), "\n")
+
+# Three round encryption
+# for word in wordArr:
+#     message = word
+
+#     # Encryption
+#     C1 = encryptCaesar(message)
+#     C2 = ROT13(C1)
+#     C3 = sBox(C2)
+
+#     # send message
+#     print('message:', message, ", sending (encrypted):", C3)
+#     s.send(C3.encode())
+
+#     # recieve message and decrypt
+#     msg = s.recv(1024)
+
+#     # Decryption
+#     C3 = inv_sBox(msg.decode())
+#     C2 = ROT13(C3)
+#     C1 = decryptCaesar(C2)
+
+#     print("received (encrypted):", msg.decode(),
+#           ", message:", C1, "\n")
 
 # Close connection
 s.close()

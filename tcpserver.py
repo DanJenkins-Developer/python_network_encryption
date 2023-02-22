@@ -37,25 +37,6 @@ serversocket.listen(5)
 #             break
 
 # ROT 13
-# while True:
-#     print('waiting for a connetion on port ' + str(port) + '\n')
-#     clientsocket, addr = serversocket.accept()
-#     print("Got a connection from " + str(addr))
-
-#    # Recieve the data
-#     while True:
-#         data = clientsocket.recv(1024).decode()
-#         if data != '':
-
-#             print("recieved (encrypted)", data, ", data:", ROT13(data), "\n")
-
-#             reply = data
-#             clientsocket.send(reply.encode())
-#         else:
-#             print("No more data from" + str(addr))
-#             break
-
-# Three round encryption
 while True:
     print('waiting for a connetion on port ' + str(port) + '\n')
     clientsocket, addr = serversocket.accept()
@@ -66,17 +47,36 @@ while True:
         data = clientsocket.recv(1024).decode()
         if data != '':
 
-            # Decryption
-            C3 = inv_sBox(data)
-            C2 = ROT13(C3)
-            C1 = decryptCaesar(C2)
-            print("recieved (encrypted)", data, ", data:", C1, "\n")
+            print("recieved (encrypted)", data, ", data:", ROT13(data), "\n")
 
-            # Reply with the same data
             reply = data
             clientsocket.send(reply.encode())
         else:
             print("No more data from" + str(addr))
             break
+
+# Three round encryption
+# while True:
+#     print('waiting for a connetion on port ' + str(port) + '\n')
+#     clientsocket, addr = serversocket.accept()
+#     print("Got a connection from " + str(addr))
+
+#    # Recieve the data
+#     while True:
+#         data = clientsocket.recv(1024).decode()
+#         if data != '':
+
+#             # Decryption
+#             C3 = inv_sBox(data)
+#             C2 = ROT13(C3)
+#             C1 = decryptCaesar(C2)
+#             print("recieved (encrypted)", data, ", data:", C1, "\n")
+
+#             # Reply with the same data
+#             reply = data
+#             clientsocket.send(reply.encode())
+#         else:
+#             print("No more data from" + str(addr))
+#             break
 
 clientsocket.close()

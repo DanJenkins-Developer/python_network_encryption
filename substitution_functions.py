@@ -141,25 +141,25 @@ if __name__ == '__main__':
     print("\n\n")
 
     # Question 1
-    plaintext = "zoo"
-    ciphertext = encryptCaesar(plaintext)
-    print("plaintext is", plaintext, "ciphertext is", ciphertext)
+    # plaintext = "zoo"
+    # ciphertext = encryptCaesar(plaintext)
+    # print("plaintext is", plaintext, "ciphertext is", ciphertext)
 
-    plaintext = "xray"
-    ciphertext = encryptCaesar(plaintext)
-    print("plaintext is", plaintext, "ciphertext is", ciphertext)
+    # plaintext = "xray"
+    # ciphertext = encryptCaesar(plaintext)
+    # print("plaintext is", plaintext, "ciphertext is", ciphertext)
 
-    plaintext = "rellis"
-    ciphertext = encryptCaesar(plaintext)
-    print("plaintext is", plaintext, "ciphertext is", ciphertext)
+    # plaintext = "rellis"
+    # ciphertext = encryptCaesar(plaintext)
+    # print("plaintext is", plaintext, "ciphertext is", ciphertext)
 
-    plaintext = "college station"
-    ciphertext = encryptCaesar(plaintext)
-    print("plaintext is", plaintext, "ciphertext is", ciphertext)
+    # plaintext = "college station"
+    # ciphertext = encryptCaesar(plaintext)
+    # print("plaintext is", plaintext, "ciphertext is", ciphertext)
 
-    plaintext = "csci458"
-    ciphertext = encryptCaesar(plaintext)
-    print("plaintext is", plaintext, "ciphertext is", ciphertext)
+    # plaintext = "csci458"
+    # ciphertext = encryptCaesar(plaintext)
+    # print("plaintext is", plaintext, "ciphertext is", ciphertext)
 
     # Question 2
     # plaintext = "zoo"
@@ -186,15 +186,15 @@ if __name__ == '__main__':
 
     # Question 4
 
-    # for word in wordArr:
+    for word in wordArr:
 
-    #     plaintext = word
-    #     print("Before sBox ::", plaintext)
+        plaintext = word
+        print("Before sBox ::", plaintext)
 
-    #     encryptedText = sBox(plaintext)
-    #     print("After sBox ::", encryptedText)
+        encryptedText = sBox(plaintext)
+        print("After sBox ::", encryptedText)
 
-    #     decryptedText = inv_sBox(encryptedText)
-    #     print("After inv_sBox", decryptedText)
+        decryptedText = inv_sBox(encryptedText)
+        print("After inv_sBox", decryptedText)
 
-    #     print("\n")
+        print("\n")
