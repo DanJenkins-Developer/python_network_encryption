@@ -5,15 +5,18 @@ date: February 20th, 2023
 geometry: margin=2cm
 output: pdf_document
 ---
-<!-- # Assignment -->
+<!-- # Assignment 2-->
 
 # Question 1: 
 ## Encode the following plaintext messages (M) using Caesar cipher encryption. 
-- M = zoo, E(M) = 2rr
-- M = xray, E(M) = ud1
-- M = rellis, E(M) = uhoolv
-- M = college station, E(M) = froohjh3vwdwlrq
-- M = csci458, E(M) = fvfl78b 
+
+| M               | E(M)           |
+|-----------------|----------------|
+| zoo             | 2rr            |
+| xray            | ud1            |
+| rellis          | uhoolv         |
+| college station | froohjh3vwdwlrq|
+| csci458         | fvfl78b        |
 
 ### substitution_functions.py output
 ``` 
@@ -67,11 +70,14 @@ waiting for a connetion on port 10000
 
 # Question 3:
 ## Encode the following plaintext messages using ROT13 encryption.
-- M1 = zoo , ROT13(M1) = mbb
-- M2 = xray , ROT13(M2) = kenl
-- M3 = rellis , ROT13(M3) = eryyvf
-- M4 = college station , ROT13(M4) = pbyyrtr fgngvba
-- M5 = csci458 , ROT13(M5) = pfpv458
+
+| M               | E(M)           |
+|-----------------|----------------|
+| zoo             | mbb            |
+| xray            | kenl           |
+| rellis          | eryyvf         |
+| college station | pbyyrtr fgngvba|
+| csci458         | pfpv458        |
 
 ### substitution_functions.py output
 ``` 
@@ -79,21 +85,17 @@ Before ROT13 :: zoo
 After ROT13 :: mbb     
 After ROT13 again:: zoo
 
-
 Before ROT13 :: xray
 After ROT13 :: kenl
 After ROT13 again:: xray
-
 
 Before ROT13 :: rellis
 After ROT13 :: eryyvf
 After ROT13 again:: rellis
 
-
 Before ROT13 :: college station
 After ROT13 :: pbyyrtr fgngvba
 After ROT13 again:: college station
-
 
 Before ROT13 :: csci458
 After ROT13 :: pfpv458
@@ -118,7 +120,6 @@ received (encrypted): pbyyrtr fgngvba , message: college station
 message: csci458 ,sending (encrypted): pfpv458
 received (encrypted): pfpv458 , message: csci458 
 ```
-
 ### tcpserver.py output
 ```
 waiting for a connetion on port 10000
@@ -137,7 +138,6 @@ recieved (encrypted) pfpv458 , data: csci458
 No more data from('127.0.0.1', 30431)
 waiting for a connetion on port 10000
 ```
-
 # Question 4: 
 ## Encode the following plaintext messages using S-Box encryption and inverse S-Box for decryption. 
 
@@ -156,21 +156,17 @@ Before sBox :: zoo
 After sBox :: fuu
 After inv_sBox zoo
 
-
 Before sBox :: xray
 After sBox :: wycn
 After inv_sBox xray
-
 
 Before sBox :: rellis
 After sBox :: yhppsj
 After inv_sBox rellis
 
-
 Before sBox :: college station
 After sBox :: iuppheh jqcqsuo
 After inv_sBox college station
-
 
 Before sBox :: csci458
 After sBox :: ijis458
@@ -197,7 +193,6 @@ received (encrypted): jhllkgk3strtnhm , message: college station
 message: csci458 , sending (encrypted): jsjn78u
 received (encrypted): jsjn78u , message: csci458
 ```
-
 ### tcpserver.py output
 ```
 waiting for a connetion on port 10000
@@ -216,7 +211,6 @@ recieved (encrypted) jsjn78u , data: csci458
 No more data from('127.0.0.1', 2093)
 waiting for a connetion on port 10000
 ```
-
 # Appendix
 
 
