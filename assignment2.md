@@ -211,6 +211,3 @@ recieved (encrypted) jsjn78u , data: csci458
 No more data from('127.0.0.1', 2093)
 waiting for a connetion on port 10000
 ```
-
-
-
